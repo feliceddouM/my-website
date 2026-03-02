@@ -44,7 +44,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <div className="pt-32 pb-24">
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-2xl mx-auto px-6">
         {/* Back link */}
         <Link
           href="/blog"
@@ -80,7 +80,7 @@ export default async function BlogPostPage({ params }: Props) {
 
         {/* Excerpt */}
         {post.excerpt && (
-          <p className="font-body text-xl text-muted-foreground leading-relaxed mb-12 max-w-2xl border-l-4 border-primary pl-5">
+          <p className="font-display text-base text-muted-foreground leading-relaxed mb-12 border-l-4 border-primary pl-5">
             {post.excerpt}
           </p>
         )}

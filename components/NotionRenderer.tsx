@@ -12,13 +12,13 @@ const components: Components = {
     <h3 className="font-display text-xl font-semibold text-foreground mt-6 mb-2">{children}</h3>
   ),
   p: ({ children }) => (
-    <p className="font-body text-foreground leading-relaxed mb-5">{children}</p>
+    <p className="font-display text-base text-foreground leading-relaxed mb-5">{children}</p>
   ),
   ul: ({ children }) => (
-    <ul className="font-body list-disc list-inside space-y-2 mb-5 text-foreground">{children}</ul>
+    <ul className="font-display text-base list-disc list-inside space-y-2 mb-5 text-foreground">{children}</ul>
   ),
   ol: ({ children }) => (
-    <ol className="font-body list-decimal list-inside space-y-2 mb-5 text-foreground">{children}</ol>
+    <ol className="font-display text-base list-decimal list-inside space-y-2 mb-5 text-foreground">{children}</ol>
   ),
   li: ({ children }) => <li className="leading-relaxed">{children}</li>,
   blockquote: ({ children }) => (
@@ -64,7 +64,7 @@ interface NotionRendererProps {
 
 export default function NotionRenderer({ content }: NotionRendererProps) {
   return (
-    <div className="max-w-2xl">
+    <div>
       <ReactMarkdown components={components}>{content}</ReactMarkdown>
     </div>
   )
