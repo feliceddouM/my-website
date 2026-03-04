@@ -41,7 +41,7 @@ export default async function CaseDetailPage({ params }: Props) {
         {/* Back link */}
         <Link
           href="/cases"
-          className="inline-flex items-center gap-2 font-display text-sm text-muted-foreground hover:text-foreground transition-colors mb-12 group"
+          className="inline-flex items-center gap-2 font-display text-lg text-muted-foreground hover:text-foreground transition-colors mb-12 group"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
           返回案例列表
@@ -79,7 +79,7 @@ export default async function CaseDetailPage({ params }: Props) {
         {/* Metric — shown after content as conclusion */}
         {c.metric && (
           <div className="mt-12">
-            <p className="font-display text-lg text-muted-foreground uppercase tracking-widest mb-3">成果</p>
+            <p className="font-display text-xl font-semibold text-foreground mb-3">成果</p>
             <p className="font-body text-lg text-foreground leading-[1.75] border-l-4 border-primary pl-5">
               {c.metric}
             </p>
@@ -106,13 +106,13 @@ export default async function CaseDetailPage({ params }: Props) {
             href="https://line.me/ti/p/~fcfwu"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-display text-sm font-medium px-5 py-2.5 rounded-md hover:opacity-90 transition-opacity"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-display text-lg font-medium px-5 py-2.5 rounded-md hover:opacity-90 transition-opacity"
           >
             有類似需求？透過 LINE 聯繫我
           </a>
           <Link
             href="/cases"
-            className="inline-flex items-center gap-2 font-display text-sm text-muted-foreground hover:text-foreground transition-colors group"
+            className="inline-flex items-center gap-2 font-display text-lg text-muted-foreground hover:text-foreground transition-colors group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             返回案例列表
