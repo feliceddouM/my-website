@@ -78,7 +78,7 @@ export default async function CaseDetailPage({ params }: Props) {
 
         {/* Metric — shown after content as conclusion */}
         {c.metric && (
-          <div className="mt-12 pt-8 border-t border-border">
+          <div className="mt-12">
             <p className="font-display text-lg text-muted-foreground uppercase tracking-widest mb-3">成果</p>
             <p className="font-body text-lg text-foreground leading-[1.75] border-l-4 border-primary pl-5">
               {c.metric}
@@ -100,8 +100,16 @@ export default async function CaseDetailPage({ params }: Props) {
           </div>
         )}
 
-        {/* Back link — bottom */}
-        <div className="mt-16 pt-8 border-t border-border">
+        {/* Bottom action bar: CTA + back link */}
+        <div className="mt-12 pt-8 border-t border-border flex items-center justify-between gap-4 flex-wrap">
+          <a
+            href="https://line.me/ti/p/~fcfwu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-display text-sm font-medium px-5 py-2.5 rounded-md hover:opacity-90 transition-opacity"
+          >
+            有類似需求？透過 LINE 聯繫我
+          </a>
           <Link
             href="/cases"
             className="inline-flex items-center gap-2 font-display text-sm text-muted-foreground hover:text-foreground transition-colors group"
