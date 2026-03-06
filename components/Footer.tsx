@@ -19,10 +19,10 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <p className="font-display text-lg font-bold text-foreground mb-2">
-              Felice Wu<span className="text-primary">.</span>
+              值說AI
             </p>
             <p className="font-body text-sm text-muted-foreground">
-              用 AI 把時間還給自己
+              幫你把 AI 真正用起來
             </p>
           </div>
 

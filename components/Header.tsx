@@ -53,7 +53,7 @@ export default function Header() {
           onClick={() => setMenuOpen(false)}
           className="font-display text-lg font-bold tracking-tight text-foreground hover:text-primary transition-colors"
         >
-          Felice Wu<span className="text-primary font-normal text-sm ml-2 tracking-normal">· AI 工作教練</span>
+          值說AI
         </Link>
 
         {/* Desktop nav */}

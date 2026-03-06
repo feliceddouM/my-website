@@ -7,7 +7,7 @@ export default function HeroSection() {
       <div className="max-w-5xl mx-auto px-6 w-full">
         <div className="max-w-3xl">
           <p className="font-display text-sm text-primary tracking-widest uppercase mb-6 animate-fade-in-up">
-            AI 工作教練 &amp; 內容創作者
+            自動化工具開發・AI 工作流程設計・企業導入諮詢
           </p>
 
           <h1
