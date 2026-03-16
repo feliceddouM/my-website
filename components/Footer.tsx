@@ -19,10 +19,10 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <p className="font-display text-lg font-bold text-foreground mb-2">
-              值說AI
+              值說
             </p>
             <p className="font-body text-sm text-muted-foreground">
-              幫你把 AI 真正用起來
+              AI 流程自動化
             </p>
           </div>
 
@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
 
         <p className="font-display text-xs text-muted-foreground mt-12">
-          © 2026 Felice Wu｜版權所有
+          © 2026 值說 WorthIt｜版權所有
         </p>
       </div>
     </footer>

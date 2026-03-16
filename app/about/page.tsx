@@ -5,8 +5,8 @@ import { getAboutContent } from '@/lib/notion'
 export const revalidate = 86400 // ISR: 24 hours
 
 export const metadata: Metadata = {
-  title: '關於值說AI',
-  description: '我是 Felice，AI 工作教練 & 內容創作者。用 AI 工作術幫助容易分心拖延的人找到屬於自己的工作節奏',
+  title: '關於值說',
+  description: '值說 (WorthIt) 提供 AI 流程自動化服務，幫助企業和團隊把重複性工作交給 AI，把時間花在真正值得的事。服務涵蓋自動化工具開發、AI 工作流程設計與企業導入諮詢。',
 }
 
 export default async function AboutPage() {
@@ -18,7 +18,7 @@ export default async function AboutPage() {
         {/* Header */}
         <div className="mb-16">
           <p className="font-display text-sm text-primary tracking-widest uppercase mb-3">
-            關於值說AI
+            關於值說
           </p>
           <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
             我們的故事

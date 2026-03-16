@@ -53,7 +53,7 @@ export default function Header() {
           onClick={() => setMenuOpen(false)}
           className="font-display text-lg font-bold tracking-tight text-foreground hover:text-primary transition-colors"
         >
-          值說AI
+          值說
         </Link>
 
         {/* Desktop nav */}

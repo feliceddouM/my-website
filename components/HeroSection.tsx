@@ -7,16 +7,16 @@ export default function HeroSection() {
       <div className="max-w-5xl mx-auto px-6 w-full">
         <div className="max-w-3xl">
           <p className="font-display text-sm text-primary tracking-widest uppercase mb-6 animate-fade-in-up">
-            你的自動化夥伴
+            AI 流程自動化
           </p>
 
           <h1
             className="font-display text-4xl sm:text-5xl md:text-7xl font-bold text-foreground leading-[1.1] mb-8 animate-fade-in-up"
             style={{ animationDelay: '0.1s' }}
           >
-            資訊爆炸的時代，
+            重複的事交給 AI，
             <br />
-            <span className="text-primary">用AI工作術讓生活更有餘裕</span>
+            <span className="text-primary">把時間花在真正值得的事</span>
           </h1>
 
           <p

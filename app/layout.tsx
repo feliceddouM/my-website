@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     default: 'Felice Wu｜AI 工作教練 & 內容創作者',
     template: '%s｜Felice Wu',
   },
-  description: 'AI 工作教練 Felice 分享 AI 工作術、工作流程設計與知識管理技巧，幫助個人在資訊爆炸的時代打造真正用得起來的工作系統',
+  description: '值說 (WorthIt) 提供 AI 流程自動化服務，幫助企業和團隊把重複性工作交給 AI，把時間花在真正值得的事。服務涵蓋自動化工具開發、AI 工作流程設計與企業導入諮詢。',
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://felicewu.dev'),
   openGraph: {
     siteName: 'Felice Wu',
