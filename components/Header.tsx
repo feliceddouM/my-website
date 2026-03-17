@@ -75,7 +75,7 @@ export default function Header() {
           <DarkModeToggle />
 
           <a
-            href="mailto:bestflow.ai@gmail.com"
+            href="mailto:hi.worthyai@gmail.com"
             className="font-display text-sm bg-primary text-primary-foreground px-4 py-2 rounded-md hover:opacity-90 transition-opacity inline-flex items-center gap-1"
           >
             聯繫我 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -115,7 +115,7 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href="mailto:bestflow.ai@gmail.com"
+              href="mailto:hi.worthyai@gmail.com"
               className="font-display text-sm bg-primary text-primary-foreground px-4 py-3 rounded-md hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-1.5 mt-6 mb-2"
             >
               聯繫我 <ArrowUpRight className="w-3.5 h-3.5" />
