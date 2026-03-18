@@ -17,7 +17,7 @@ export default async function AboutPage() {
       <div className="max-w-3xl mx-auto px-6">
         {/* Header */}
         <div className="mb-16">
-          <p className="font-display text-sm text-primary tracking-widest uppercase mb-3">
+          <p className="font-display text-base text-primary tracking-widest uppercase mb-3">
             關於值說
           </p>
           <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">

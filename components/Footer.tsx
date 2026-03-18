@@ -18,10 +18,10 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           {/* Brand */}
           <div>
-            <p className="font-display text-lg font-bold text-foreground mb-2">
+            <p className="font-display text-2xl font-bold text-foreground mb-2">
               值說
             </p>
-            <p className="font-body text-sm text-muted-foreground">
+            <p className="font-body text-base text-muted-foreground">
               AI 流程自動化服務
             </p>
           </div>
@@ -33,7 +33,7 @@ export default function Footer() {
                 <Link
                   key={href}
                   href={href}
-                  className="font-display text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="font-display text-base text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {label}
                 </Link>
@@ -46,7 +46,7 @@ export default function Footer() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-display text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="font-display text-base text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {label}
                 </a>
@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="font-display text-xs text-muted-foreground mt-12">
+        <p className="font-display text-sm text-muted-foreground mt-12">
           © 2026 值說 WorthIt｜版權所有
         </p>
       </div>

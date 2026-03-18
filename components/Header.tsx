@@ -51,7 +51,7 @@ export default function Header() {
         <Link
           href="/"
           onClick={() => setMenuOpen(false)}
-          className="font-display text-lg font-bold tracking-tight text-foreground hover:text-primary transition-colors"
+          className="font-display text-2xl font-bold tracking-tight text-foreground hover:text-primary transition-colors"
         >
           值說
         </Link>
@@ -62,7 +62,7 @@ export default function Header() {
             <Link
               key={href}
               href={href}
-              className={`font-display text-sm transition-colors ${
+              className={`font-display text-base transition-colors ${
                 pathname === href || pathname.startsWith(href + '/')
                   ? 'text-foreground font-medium'
                   : 'text-muted-foreground hover:text-foreground'

@@ -31,7 +31,7 @@ export default async function HomePage() {
       <section className="py-24 md:py-32">
         <div className="max-w-5xl mx-auto px-6">
           <div className="mb-16">
-            <p className="font-display text-sm text-primary tracking-widest uppercase mb-3">
+            <p className="font-display text-base text-primary tracking-widest uppercase mb-3">
               文章
             </p>
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
@@ -45,7 +45,7 @@ export default async function HomePage() {
               </div>
               <Link
                 href="/blog"
-                className="font-display text-sm text-primary hover:opacity-80 transition-opacity flex items-center gap-1 shrink-0"
+                className="font-display text-base text-primary hover:opacity-80 transition-opacity flex items-center gap-1 shrink-0"
               >
                 查看全部 <ArrowUpRight className="w-4 h-4" />
               </Link>
@@ -68,7 +68,7 @@ export default async function HomePage() {
       <section className="py-24 md:py-32 bg-card">
         <div className="max-w-5xl mx-auto px-6">
           <div className="mb-16">
-            <p className="font-display text-sm text-primary tracking-widest uppercase mb-3">
+            <p className="font-display text-base text-primary tracking-widest uppercase mb-3">
               案例
             </p>
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
@@ -82,7 +82,7 @@ export default async function HomePage() {
               </div>
               <Link
                 href="/cases"
-                className="font-display text-sm text-primary hover:opacity-80 transition-opacity flex items-center gap-1 shrink-0"
+                className="font-display text-base text-primary hover:opacity-80 transition-opacity flex items-center gap-1 shrink-0"
               >
                 查看全部 <ArrowUpRight className="w-4 h-4" />
               </Link>
