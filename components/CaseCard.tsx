@@ -12,8 +12,12 @@ export default function CaseCard({ automationCase: c }: CaseCardProps) {
   const hasExternalLink = c.link && c.link !== '#'
   const isLinked = hasInternalPage || hasExternalLink
 
+  // Show before/after if either field exists; fall back to metric for "after"
+  const afterText = c.after || c.metric
+  const showBeforeAfter = Boolean(c.before || afterText)
+
   const sharedClass =
-    'group block bg-background border border-border rounded-lg p-8 hover:border-primary/40 hover:shadow-lg transition-all duration-300'
+    'group block bg-background border border-border rounded-lg p-6 md:p-8 hover:border-primary/40 hover:shadow-lg transition-all duration-300'
 
   const inner = (
     <>
@@ -49,6 +53,27 @@ export default function CaseCard({ automationCase: c }: CaseCardProps) {
         ))}
       </div>
 
+      {/* Before / After */}
+      {showBeforeAfter && (
+        <div className={`grid gap-2 pt-4 border-t border-border ${c.before && afterText ? 'grid-cols-2' : 'grid-cols-1'}`}>
+          {c.before && (
+            <div className="rounded-md bg-muted px-4 py-3">
+              <p className="font-display text-xs text-muted-foreground uppercase tracking-wider mb-1.5">
+                以前
+              </p>
+              <p className="font-body text-sm text-foreground/70 leading-snug">{c.before}</p>
+            </div>
+          )}
+          {afterText && (
+            <div className="rounded-md bg-primary/10 px-4 py-3">
+              <p className="font-display text-xs text-primary uppercase tracking-wider mb-1.5">
+                現在
+              </p>
+              <p className="font-body text-sm text-foreground leading-snug">{afterText}</p>
+            </div>
+          )}
+        </div>
+      )}
     </>
   )
 
@@ -68,5 +93,5 @@ export default function CaseCard({ automationCase: c }: CaseCardProps) {
     )
   }
 
-  return <div className="group block bg-background border border-border rounded-lg p-8">{inner}</div>
+  return <div className="group block bg-background border border-border rounded-lg p-6 md:p-8">{inner}</div>
 }

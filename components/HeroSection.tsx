@@ -1,5 +1,8 @@
 import Link from 'next/link'
-import { ArrowDown } from 'lucide-react'
+import { ArrowUpRight, ArrowDown } from 'lucide-react'
+
+// TODO: 替換成正確的 LINE 預約連結，或設定環境變數 LINE_URL
+const LINE_URL = process.env.LINE_URL ?? 'mailto:hi.worthyai@gmail.com'
 
 export default function HeroSection() {
   return (
@@ -23,17 +26,28 @@ export default function HeroSection() {
             className="font-body text-xl md:text-2xl text-muted-foreground leading-relaxed mb-12 max-w-xl animate-fade-in-up"
             style={{ animationDelay: '0.2s' }}
           >
-            自動化工具開發、AI 工作流程設計、企業導入諮詢
+            幫品牌、知識工作者串接 AI 自動化流程，讓報表自己跑、內容自己發、數據自己更新
           </p>
 
-          <Link
-            href="/cases"
-            className="animate-fade-in-up inline-flex items-center gap-2 font-display text-base text-muted-foreground hover:text-foreground transition-colors group"
+          <div
+            className="flex flex-col sm:flex-row gap-4 animate-fade-in-up"
             style={{ animationDelay: '0.3s' }}
           >
-            探索企業案例
-            <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
-          </Link>
+            <a
+              href={LINE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 font-display text-base bg-primary text-primary-foreground px-6 py-3 rounded-md hover:opacity-90 transition-opacity"
+            >
+              免費 15 分鐘流程健診 <ArrowUpRight className="w-4 h-4" />
+            </a>
+            <Link
+              href="#cases"
+              className="inline-flex items-center justify-center gap-2 font-display text-base border border-border text-muted-foreground px-6 py-3 rounded-md hover:text-foreground hover:border-foreground/30 transition-colors"
+            >
+              看案例 <ArrowDown className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </div>
     </section>

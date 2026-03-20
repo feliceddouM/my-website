@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   description: '值說 (WorthIt) 提供 AI 流程自動化服務，幫助企業和團隊把重複性工作交給 AI，把時間花在真正值得的事。服務涵蓋自動化工具開發、AI 工作流程設計與企業導入諮詢。',
 }
 
+// TODO: 替換成正確的 LINE 預約連結，或在 Vercel 設定環境變數 LINE_URL
+const LINE_URL = process.env.LINE_URL ?? 'mailto:hi.worthyai@gmail.com'
+
 export default async function HomePage() {
   const [allPosts, allCases] = await Promise.all([
     getPublishedPosts().catch(() => []),
@@ -21,14 +24,48 @@ export default async function HomePage() {
   ])
 
   const featuredPosts = allPosts.slice(0, 3)
-  const featuredCases = allCases.slice(0, 4)
 
   return (
     <>
-      {/* Hero */}
+      {/* ① Hero */}
       <HeroSection />
 
-      {/* Latest Articles */}
+      {/* ② Cases */}
+      <section id="cases" className="py-24 md:py-32 bg-card">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="mb-16">
+            <p className="font-display text-base text-primary tracking-widest uppercase mb-3">
+              案例
+            </p>
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+                實際做過的事
+              </h2>
+              <Link
+                href="/cases"
+                className="font-display text-base text-primary hover:opacity-80 transition-opacity flex items-center gap-1 shrink-0"
+              >
+                查看全部 <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {allCases.length === 0 ? (
+              <p className="font-body text-muted-foreground">案例即將上線，敬請期待</p>
+            ) : (
+              allCases.map((c) => (
+                <CaseCard key={c.id} automationCase={c} />
+              ))
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* ③ Newsletter */}
+      <NewsletterSection />
+
+      {/* ④ Articles */}
       <section className="py-24 md:py-32">
         <div className="max-w-5xl mx-auto px-6">
           <div className="mb-16">
@@ -36,14 +73,9 @@ export default async function HomePage() {
               文章
             </p>
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
-              <div>
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-                  最新文章
-                </h2>
-                <p className="font-body text-lg text-muted-foreground max-w-lg">
-                  AI 趨勢 × 自動化教學
-                </p>
-              </div>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+                最新文章
+              </h2>
               <Link
                 href="/blog"
                 className="font-display text-base text-primary hover:opacity-80 transition-opacity flex items-center gap-1 shrink-0"
@@ -65,43 +97,25 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Newsletter */}
-      <NewsletterSection />
-
-      {/* Automation Cases */}
-      <section className="py-24 md:py-32 bg-card">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="mb-16">
-            <p className="font-display text-base text-primary tracking-widest uppercase mb-3">
-              案例
-            </p>
-            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
-              <div>
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-                  精選案例
-                </h2>
-                <p className="font-body text-lg text-muted-foreground max-w-lg">
-                  企業自動化案例
-                </p>
-              </div>
-              <Link
-                href="/cases"
-                className="font-display text-base text-primary hover:opacity-80 transition-opacity flex items-center gap-1 shrink-0"
-              >
-                查看全部 <ArrowUpRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {featuredCases.length === 0 ? (
-              <p className="font-body text-muted-foreground">案例即將上線，敬請期待</p>
-            ) : (
-              featuredCases.map((c) => (
-                <CaseCard key={c.id} automationCase={c} />
-              ))
-            )}
-          </div>
+      {/* ⑤ CTA */}
+      <section className="py-24 md:py-32 bg-foreground">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-background leading-tight mb-5">
+            你的流程有沒有
+            <br className="sm:hidden" />
+            可以自動化的空間？
+          </h2>
+          <p className="font-body text-lg text-background/55 leading-relaxed mb-10 max-w-sm mx-auto">
+            花 15 分鐘聊聊，幫你找出最值得優化的一個環節
+          </p>
+          <a
+            href={LINE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 font-display text-base bg-primary text-primary-foreground px-8 py-4 rounded-md hover:opacity-90 transition-opacity"
+          >
+            免費預約健診 <ArrowUpRight className="w-5 h-5" />
+          </a>
         </div>
       </section>
     </>

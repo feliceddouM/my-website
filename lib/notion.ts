@@ -43,6 +43,8 @@ export interface AutomationCase {
   icon: string
   link: string
   order: number
+  before?: string  // Notion 屬性「以前」
+  after?: string   // Notion 屬性「現在」
 }
 
 // ── Blog Posts ──────────────────────────────────────────────────────────────
@@ -121,6 +123,8 @@ function parseCase(page: PageObjectResponse): AutomationCase {
     icon: extractText(props['圖示']?.rich_text ?? []),
     link: props['連結']?.url ?? '#',
     order: props['排序']?.number ?? 99,
+    before: extractText(props['以前']?.rich_text ?? []) || undefined,
+    after: extractText(props['現在']?.rich_text ?? []) || undefined,
   }
 }
 

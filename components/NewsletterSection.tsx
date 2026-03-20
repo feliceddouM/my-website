@@ -1,6 +1,13 @@
 'use client'
 
 import { useState } from 'react'
+import { Check } from 'lucide-react'
+
+const benefits = [
+  '做專案時踩過的坑、還沒公開的工具心得',
+  '我這兩週在幫什麼客戶解決什麼問題',
+  '官網沒寫的第一手觀察',
+]
 
 export default function NewsletterSection() {
   const [email, setEmail] = useState('')
@@ -29,48 +36,64 @@ export default function NewsletterSection() {
   }
 
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-24 md:py-32 bg-card">
       <div className="max-w-5xl mx-auto px-6">
-        <div className="max-w-xl">
-          <p className="font-display text-base text-primary tracking-widest uppercase mb-3">
+        <div className="max-w-xl rounded-2xl bg-foreground p-8 md:p-10">
+
+          <p className="font-display text-xs text-primary tracking-widest uppercase mb-4">
             電子報
           </p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            值說電子報
+
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-background mb-3 leading-snug">
+            偶爾寄給你一封有料的信
           </h2>
-          <p className="font-body text-lg text-muted-foreground mb-8">
-            AI 自動化的實作觀察、還沒公開的工具心得，訂閱者限定
+
+          <p className="font-body text-base text-background/60 mb-7 leading-relaxed">
+            分享實戰心得，讓你少走彎路。
           </p>
 
+          <ul className="space-y-3 mb-8">
+            {benefits.map((item) => (
+              <li key={item} className="flex items-start gap-3">
+                <Check className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                <span className="font-body text-sm text-background/75 leading-snug">{item}</span>
+              </li>
+            ))}
+          </ul>
+
           {status === 'success' ? (
-            <p className="font-body text-base text-foreground">
+            <p className="font-body text-base text-background py-2">
               已收到！下一封信見 👋
             </p>
           ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                required
-                placeholder="your@email.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                disabled={status === 'loading'}
-                className="flex-1 px-4 py-2.5 rounded-md border border-border bg-background text-foreground font-body text-base placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring disabled:opacity-50"
-              />
-              <button
-                type="submit"
-                disabled={status === 'loading'}
-                className="px-6 py-2.5 rounded-md bg-primary text-primary-foreground font-display text-base font-medium hover:opacity-90 transition-opacity disabled:opacity-50 shrink-0"
-              >
-                {status === 'loading' ? '訂閱中…' : '訂閱'}
-              </button>
-            </form>
-          )}
+            <>
+              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 mb-3">
+                <input
+                  type="email"
+                  required
+                  placeholder="你的 email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  disabled={status === 'loading'}
+                  className="flex-1 px-4 py-2.5 rounded-md bg-background/10 border border-background/20 text-background placeholder:text-background/40 font-body text-base focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50"
+                />
+                <button
+                  type="submit"
+                  disabled={status === 'loading'}
+                  className="px-6 py-2.5 rounded-md bg-primary text-primary-foreground font-display text-base font-medium hover:opacity-90 transition-opacity disabled:opacity-50 shrink-0"
+                >
+                  {status === 'loading' ? '訂閱中…' : '訂閱'}
+                </button>
+              </form>
 
-          {status === 'error' && (
-            <p className="font-body text-sm text-destructive mt-3">
-              出了點問題，請稍後再試
-            </p>
+              {status === 'error' && (
+                <p className="font-body text-sm text-destructive mb-2">出了點問題，請稍後再試</p>
+              )}
+
+              <p className="font-body text-xs text-background/35">
+                不定時寄出，隨時可取消訂閱
+              </p>
+            </>
           )}
         </div>
       </div>
