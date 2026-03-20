@@ -4,6 +4,7 @@ import { ArrowUpRight } from 'lucide-react'
 import HeroSection from '@/components/HeroSection'
 import ArticleCard from '@/components/ArticleCard'
 import CaseCard from '@/components/CaseCard'
+import NewsletterSection from '@/components/NewsletterSection'
 import { getPublishedPosts, getCases } from '@/lib/notion'
 
 export const revalidate = 3600 // ISR: revalidate every 1 hour
@@ -63,6 +64,9 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Newsletter */}
+      <NewsletterSection />
 
       {/* Automation Cases */}
       <section className="py-24 md:py-32 bg-card">
