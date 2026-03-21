@@ -5,8 +5,8 @@ import { getPublishedPosts } from '@/lib/notion'
 export const revalidate = 3600 // ISR: 1 hour
 
 export const metadata: Metadata = {
-  title: '文章',
-  description: 'AI 趨勢 × 自動化教學',
+  title: '觀點',
+  description: '給已經知道 AI 自動化是什麼、正在評估怎麼做的人。比較工具選擇、比較自建與顧問外包的優缺點，以及導入過程中會卡住的地方。',
 }
 
 export default async function BlogPage() {
@@ -18,13 +18,13 @@ export default async function BlogPage() {
         {/* Header */}
         <div className="mb-16">
           <p className="font-display text-base text-primary tracking-widest uppercase mb-3">
-            文章
+            觀點
           </p>
           <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
-            所有文章
+            所有觀點
           </h1>
           <p className="font-body text-lg text-muted-foreground max-w-lg">
-            AI 趨勢 × 自動化教學
+            給已經知道 AI 自動化是什麼、正在評估怎麼做的人
           </p>
         </div>
 

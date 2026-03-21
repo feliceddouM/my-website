@@ -10,23 +10,23 @@ export default function HeroSection() {
       <div className="max-w-5xl mx-auto px-6 w-full">
         <div className="max-w-3xl">
           <p className="font-display text-base text-primary tracking-widest uppercase mb-6 animate-fade-in-up">
-            AI 流程自動化服務
+            AI 工作流程・自動化工具・企業導入
           </p>
 
           <h1
             className="font-display text-4xl sm:text-5xl md:text-7xl font-bold text-foreground leading-[1.1] mb-8 animate-fade-in-up"
             style={{ animationDelay: '0.1s' }}
           >
-            重複的事交給 AI
+            重複的工作交給 AI
             <br />
-            <span className="text-primary">AI 的事交給值說</span>
+            <span className="text-primary">串自動化流程交給我們</span>
           </h1>
 
           <p
             className="font-body text-xl md:text-2xl text-muted-foreground leading-relaxed mb-12 max-w-xl animate-fade-in-up"
             style={{ animationDelay: '0.2s' }}
           >
-            幫品牌、知識工作者串接 AI 自動化流程，讓報表自己跑、內容自己發、數據自己更新
+            讓報表自己跑、內容自己發、數據自己更新
           </p>
 
           <div

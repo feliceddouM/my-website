@@ -5,7 +5,7 @@ const socialLinks = [
 ]
 
 const navLinks = [
-  { href: '/blog', label: '文章' },
+  { href: '/blog', label: '觀點' },
   { href: '/cases', label: '案例' },
   { href: '/diagnose', label: '流程健檢' },
   { href: '/about', label: '關於值說' },

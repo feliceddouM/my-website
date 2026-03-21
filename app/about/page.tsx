@@ -5,8 +5,8 @@ import { getAboutContent } from '@/lib/notion'
 export const revalidate = 86400 // ISR: 24 hours
 
 export const metadata: Metadata = {
-  title: '關於值說',
-  description: '值說 (WorthIt) 提供 AI 流程自動化服務，幫助企業和團隊把重複性工作交給 AI，把時間花在真正值得的事。服務涵蓋自動化工具開發、AI 工作流程設計與企業導入諮詢。',
+  title: { absolute: '關於值說 WorthIt' },
+  description: '值說 WorthIt 從使用者而非工程師的角度切入 AI 自動化，幫助品牌與團隊把複雜的 AI 應用轉化成聽得懂的語言，用小步快跑的方式迅速落地執行。',
 }
 
 export default async function AboutPage() {

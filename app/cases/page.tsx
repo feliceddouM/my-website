@@ -5,8 +5,8 @@ import { getCases } from '@/lib/notion'
 export const revalidate = 86400 // ISR: 24 hours
 
 export const metadata: Metadata = {
-  title: '自動化案例',
-  description: '實際執行過的流程自動化專案與小工具，每個案例都有工具介紹與成果數據',
+  title: '案例',
+  description: '實際執行與精選分析的 AI 流程自動化案例，包含工具選擇、解題過程與 before/after 成果對比，提供可直接參考的自動化靈感。',
 }
 
 export default async function CasesPage() {

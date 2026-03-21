@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import DiagnoseForm from './DiagnoseForm'
 
 export const metadata: Metadata = {
-  title: '免費流程健檢',
+  title: '免費流程健診',
   description: '花兩分鐘了解你的工作流程有多少可以自動化、省下來的時間可以拿去做什麼。',
 }
 
