@@ -7,7 +7,8 @@ const socialLinks = [
 const navLinks = [
   { href: '/blog', label: '文章' },
   { href: '/cases', label: '案例' },
-  { href: '/about', label: '關於我' },
+  { href: '/diagnose', label: '流程健診' },
+  { href: '/about', label: '關於值說' },
 ]
 
 export default function Footer() {

@@ -64,7 +64,7 @@ export default async function HomePage() {
       <NewsletterSection />
 
       {/* ④ Articles */}
-      <section className="py-24 md:py-32">
+      <section className="py-24 md:py-32 bg-card">
         <div className="max-w-5xl mx-auto px-6">
           <div className="mb-16">
             <p className="font-display text-base text-primary tracking-widest uppercase mb-3">
@@ -96,14 +96,14 @@ export default async function HomePage() {
       </section>
 
       {/* ⑤ CTA */}
-      <section className="py-24 md:py-32 bg-foreground">
+      <section className="py-24 md:py-32">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-background leading-tight mb-5">
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground leading-tight mb-5">
             你的流程有沒有
             <br className="sm:hidden" />
             可以自動化的空間？
           </h2>
-          <p className="font-body text-lg text-background/55 leading-relaxed mb-10 max-w-sm mx-auto">
+          <p className="font-body text-lg text-muted-foreground leading-relaxed mb-10 max-w-sm mx-auto">
             花 15 分鐘聊聊，幫你找出最值得優化的一個環節
           </p>
           <Link
