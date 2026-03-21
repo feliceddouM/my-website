@@ -99,16 +99,16 @@ export default async function HomePage() {
       <section className="py-24 md:py-32">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground leading-tight mb-5">
-            當你的對手都在
+            不知道從哪裡開始？
           </h2>
           <p className="font-body text-lg text-muted-foreground leading-relaxed mb-10 max-w-sm mx-auto">
-            讓報表自己跑、內容自己發、數據自己更新
+            花 2 分鐘找出第一步
           </p>
           <Link
             href="/diagnose"
             className="inline-flex items-center gap-2 font-display text-base bg-primary text-primary-foreground px-8 py-4 rounded-md hover:opacity-90 transition-opacity"
           >
-            怎麼做到？ <ArrowUpRight className="w-5 h-5" />
+            開始流程健檢 <ArrowUpRight className="w-5 h-5" />
           </Link>
         </div>
       </section>

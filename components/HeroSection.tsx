@@ -39,7 +39,7 @@ export default function HeroSection() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 font-display text-base bg-primary text-primary-foreground px-6 py-3 rounded-md hover:opacity-90 transition-opacity"
             >
-              免費 15 分鐘流程健檢 <ArrowUpRight className="w-4 h-4" />
+              開始流程健檢 <ArrowUpRight className="w-4 h-4" />
             </a>
             <Link
               href="#cases"
