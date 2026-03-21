@@ -99,18 +99,16 @@ export default async function HomePage() {
       <section className="py-24 md:py-32">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground leading-tight mb-5">
-            你的流程有沒有
-            <br className="sm:hidden" />
-            可以自動化的空間？
+            當你的對手都在
           </h2>
           <p className="font-body text-lg text-muted-foreground leading-relaxed mb-10 max-w-sm mx-auto">
-            花 15 分鐘聊聊，幫你找出最值得優化的一個環節
+            讓報表自己跑、內容自己發、數據自己更新
           </p>
           <Link
             href="/diagnose"
             className="inline-flex items-center gap-2 font-display text-base bg-primary text-primary-foreground px-8 py-4 rounded-md hover:opacity-90 transition-opacity"
           >
-            免費預約健診 <ArrowUpRight className="w-5 h-5" />
+            怎麼做到？ <ArrowUpRight className="w-5 h-5" />
           </Link>
         </div>
       </section>

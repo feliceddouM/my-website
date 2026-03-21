@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import DiagnoseForm from './DiagnoseForm'
 
 export const metadata: Metadata = {
-  title: '免費流程健診',
+  title: '免費流程健檢',
   description: '花兩分鐘了解你的工作流程有多少可以自動化、省下來的時間可以拿去做什麼。',
 }
 
@@ -13,7 +13,7 @@ export default function DiagnosePage() {
 
         <div className="mb-16">
           <p className="font-display text-base text-primary tracking-widest uppercase mb-3">
-            流程健診
+            流程健檢
           </p>
           <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
             花兩分鐘，
