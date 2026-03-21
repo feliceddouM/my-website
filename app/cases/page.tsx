@@ -18,13 +18,13 @@ export default async function CasesPage() {
         {/* Header */}
         <div className="mb-16">
           <p className="font-display text-base text-primary tracking-widest uppercase mb-3">
-            自動化案例
+            案例
           </p>
           <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
-            所有案例
+            自動化實際案例
           </h1>
           <p className="font-body text-lg text-muted-foreground max-w-lg">
-            企業自動化案例
+            我們精選的企業 AI 應用案例
           </p>
         </div>
 

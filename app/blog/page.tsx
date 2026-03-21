@@ -21,10 +21,10 @@ export default async function BlogPage() {
             觀點
           </p>
           <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
-            所有觀點
+            AI 趨勢與應用
           </h1>
           <p className="font-body text-lg text-muted-foreground max-w-lg">
-            給已經知道 AI 自動化是什麼、正在評估怎麼做的人
+            我們導入 AI 的現場觀察
           </p>
         </div>
 
