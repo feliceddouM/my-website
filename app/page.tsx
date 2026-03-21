@@ -68,11 +68,11 @@ export default async function HomePage() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="mb-16">
             <p className="font-display text-base text-primary tracking-widest uppercase mb-3">
-              文章
+              觀點
             </p>
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-                最新文章
+                AI 使用心法與觀察
               </h2>
               <Link
                 href="/blog"
