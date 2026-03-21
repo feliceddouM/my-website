@@ -14,9 +14,6 @@ export const metadata: Metadata = {
   description: '值說 (WorthIt) 提供 AI 流程自動化服務，幫助企業和團隊把重複性工作交給 AI，把時間花在真正值得的事。服務涵蓋自動化工具開發、AI 工作流程設計與企業導入諮詢。',
 }
 
-// TODO: 替換成正確的 LINE 預約連結，或在 Vercel 設定環境變數 LINE_URL
-const LINE_URL = process.env.LINE_URL ?? 'mailto:hi.worthyai@gmail.com'
-
 export default async function HomePage() {
   const [allPosts, allCases] = await Promise.all([
     getPublishedPosts().catch(() => []),
@@ -108,14 +105,12 @@ export default async function HomePage() {
           <p className="font-body text-lg text-background/55 leading-relaxed mb-10 max-w-sm mx-auto">
             花 15 分鐘聊聊，幫你找出最值得優化的一個環節
           </p>
-          <a
-            href={LINE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/diagnose"
             className="inline-flex items-center gap-2 font-display text-base bg-primary text-primary-foreground px-8 py-4 rounded-md hover:opacity-90 transition-opacity"
           >
             免費預約健診 <ArrowUpRight className="w-5 h-5" />
-          </a>
+          </Link>
         </div>
       </section>
     </>

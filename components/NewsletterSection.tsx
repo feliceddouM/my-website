@@ -36,7 +36,7 @@ export default function NewsletterSection() {
   }
 
   return (
-    <section className="py-24 md:py-32 border-t border-border">
+    <section className="py-24 md:py-32">
       <div className="max-w-5xl mx-auto px-6">
         <div className="max-w-xl">
 
