@@ -103,7 +103,7 @@ export default async function CaseDetailPage({ params }: Props) {
         {/* Bottom action bar: CTA + back link */}
         <div className="mt-12 pt-8 border-t border-border flex items-center justify-between gap-4 flex-wrap">
           <a
-            href="https://line.me/ti/p/~fcfwu"
+            href="https://line.me/R/ti/p/@090nxouo"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-display text-lg font-medium px-5 py-2.5 rounded-md hover:opacity-90 transition-opacity"

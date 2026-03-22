@@ -1,9 +1,6 @@
 import Link from 'next/link'
 import { ArrowUpRight, ArrowDown } from 'lucide-react'
 
-// TODO: 替換成正確的 LINE 預約連結，或設定環境變數 LINE_URL
-const LINE_URL = process.env.LINE_URL ?? 'mailto:hi.worthyai@gmail.com'
-
 export default function HeroSection() {
   return (
     <section className="min-h-[85vh] flex items-center pt-20">
@@ -33,14 +30,12 @@ export default function HeroSection() {
             className="flex flex-col sm:flex-row gap-4 animate-fade-in-up"
             style={{ animationDelay: '0.3s' }}
           >
-            <a
-              href={LINE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/diagnose"
               className="inline-flex items-center justify-center gap-2 font-display text-base bg-primary text-primary-foreground px-6 py-3 rounded-md hover:opacity-90 transition-opacity"
             >
               開始流程健檢 <ArrowUpRight className="w-4 h-4" />
-            </a>
+            </Link>
             <Link
               href="#cases"
               className="inline-flex items-center justify-center gap-2 font-display text-base border border-border text-muted-foreground px-6 py-3 rounded-md hover:text-foreground hover:border-foreground/30 transition-colors"
