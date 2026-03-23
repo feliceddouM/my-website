@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Moon, Sun, ArrowUpRight, Menu, X } from 'lucide-react'
+import { Moon, Sun, Menu, X } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
@@ -74,13 +74,6 @@ export default function Header() {
           ))}
 
           <DarkModeToggle />
-
-          <a
-            href="https://line.me/R/ti/p/@090nxouo"
-            className="font-display text-sm bg-primary text-primary-foreground px-4 py-2 rounded-md hover:opacity-90 transition-opacity inline-flex items-center gap-1"
-          >
-            聯繫我 <ArrowUpRight className="w-3.5 h-3.5" />
-          </a>
         </nav>
 
         {/* Mobile: dark mode toggle + hamburger */}
@@ -115,12 +108,6 @@ export default function Header() {
                 {label}
               </Link>
             ))}
-            <a
-              href="https://line.me/R/ti/p/@090nxouo"
-              className="font-display text-sm bg-primary text-primary-foreground px-4 py-3 rounded-md hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-1.5 mt-6 mb-2"
-            >
-              聯繫我 <ArrowUpRight className="w-3.5 h-3.5" />
-            </a>
           </nav>
         </div>
       )}
