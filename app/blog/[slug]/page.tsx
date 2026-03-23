@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft, Calendar } from 'lucide-react'
 import NotionRenderer from '@/components/NotionRenderer'
-import NewsletterSection from '@/components/NewsletterSection'
+import NewsletterInline from '@/components/NewsletterInline'
 import { getPostBySlug, getPostContent, getAllPostSlugs } from '@/lib/notion'
 
 export const revalidate = 3600 // ISR: 1 hour
@@ -89,8 +89,11 @@ export default async function BlogPostPage({ params }: Props) {
         {/* Content */}
         <NotionRenderer content={content} />
 
+        {/* Newsletter CTA */}
+        <NewsletterInline />
+
         {/* Back link */}
-        <div className="mt-16 pt-8 border-t border-border">
+        <div className="mt-8 pt-8 border-t border-border">
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 font-display text-base text-muted-foreground hover:text-foreground transition-colors group"
@@ -100,9 +103,6 @@ export default async function BlogPostPage({ params }: Props) {
           </Link>
         </div>
       </div>
-
-      {/* Newsletter CTA */}
-      <NewsletterSection />
     </div>
   )
 }
