@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from 'next/server'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 const notion = new Client({ auth: process.env.NOTION_API_KEY })
-const NEWSLETTER_DB_ID = process.env.NOTION_NEWSLETTER_DB_ID!
+const NEWSLETTER_DB_ID = process.env.NOTION_SUBSCRIBER_DB_ID!
 
 export async function POST(req: NextRequest) {
   const { email } = await req.json()
