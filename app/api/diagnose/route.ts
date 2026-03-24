@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
 
     // Send notification email (fire-and-forget, failure won't affect the user)
     resend.emails.send({
-      from: 'onboarding@resend.dev',
+      from: 'notify@worthit-ai.com',
       to: process.env.NOTIFY_EMAIL ?? 'hi.worthyai@gmail.com',
       subject: `新流程健檢：${name || email}`,
       html: `
