@@ -1,6 +1,4 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { ArrowUpRight } from 'lucide-react'
 import NotionRenderer from '@/components/NotionRenderer'
 import { getAboutContent } from '@/lib/notion'
 
@@ -39,12 +37,14 @@ export default async function AboutPage() {
             想聊聊你的需求？
           </h2>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-            <Link
-              href="/diagnose"
-              className="inline-flex items-center gap-2 font-display text-base bg-primary text-primary-foreground px-6 py-3 rounded-md hover:opacity-90 transition-opacity"
+            <a
+              href="https://line.me/R/ti/p/@090nxouo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-display text-base bg-[#06C755] text-white px-6 py-3 rounded-md hover:opacity-90 transition-opacity"
             >
-              開始流程健檢 <ArrowUpRight className="w-4 h-4" />
-            </Link>
+              加入 LINE 諮詢
+            </a>
             <a
               href="mailto:hi.worthyai@gmail.com"
               className="font-body text-base text-muted-foreground hover:text-foreground transition-colors"

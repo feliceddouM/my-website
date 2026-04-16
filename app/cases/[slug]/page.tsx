@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { ArrowLeft, ArrowUpRight } from 'lucide-react'
+import { ArrowLeft } from 'lucide-react'
 import NotionRenderer from '@/components/NotionRenderer'
 import { getCaseBySlug, getAllCaseSlugs, getPostContent } from '@/lib/notion'
 
@@ -102,12 +102,14 @@ export default async function CaseDetailPage({ params }: Props) {
 
         {/* Bottom action bar: CTA + back link */}
         <div className="mt-12 pt-8 border-t border-border flex items-center justify-between gap-4 flex-wrap">
-          <Link
-            href="/diagnose"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-display text-lg font-medium px-5 py-2.5 rounded-md hover:opacity-90 transition-opacity"
+          <a
+            href="https://line.me/R/ti/p/@090nxouo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-[#06C755] text-white font-display text-lg font-medium px-5 py-2.5 rounded-md hover:opacity-90 transition-opacity"
           >
-            有類似需求？開始流程健檢 <ArrowUpRight className="w-4 h-4" />
-          </Link>
+            有類似需求？加入 LINE 諮詢
+          </a>
           <Link
             href="/cases"
             className="inline-flex items-center gap-2 font-display text-lg text-muted-foreground hover:text-foreground transition-colors group"
