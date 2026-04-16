@@ -38,7 +38,7 @@ export default function Footer() {
             <div className="flex gap-4">
               {/* Threads */}
               <a
-                href="https://www.threads.com/@worthyai.tw"
+                href="https://www.threads.com/@worthit_ai_com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Threads"
